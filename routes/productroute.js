@@ -9,7 +9,7 @@ router.route("/products").get(getAllproducts);
 router.route("/createproduct").post(isAuthenticatedUser,authorizeRoles("admin"),createProduct);
 
 router.route("/review").put(isAuthenticatedUser, createProductReview);
-
+// checked
 
 
 
