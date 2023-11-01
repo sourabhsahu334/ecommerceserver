@@ -1,12 +1,11 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 mongoose.Promise = global.Promise;
-const db1="mongodb+srv://sourabh2:18jan2002@cluster0.88wwojw.mongodb.net/test"
-const db="mongodb+srv://sourabh:18jan2002@cluster1.bw6g0pq.mongodb.net/Registration"
-const local="mongodb://0.0.0.0:27017/Template"
+const db = process.env.DATABASE_URL
 // Connect MongoDB at default port 27017.
 
-mongoose.connect(local, {
+mongoose.connect(db, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
    
